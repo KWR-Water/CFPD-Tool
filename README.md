@@ -1,24 +1,45 @@
-Use this repository as a template. Do a global search in all files to 'package_name' and replace it with the actual package name.
+# CFPD Tool
 
-rename the folder 'package_name' to the name of your package as well
+'CFPD Tool' is a GUI tool written in Python that applies CFPD (Comparison of Flow Pattern Distribution) analyses on flow data for drinking water DMAs and supply areas.
 
-Make a list of all the packages required to run your code in requirements.txt. If this repository depends on any package
-that should be installed by conda instead of pip, add that package in requirements_conda.yml; also specify your
-python version in that file.
+The code was written in 2010-2014 as I was learning Python. Therefore, there is room for improvement in terms of coding standards. But the tool functions and is usable for research and operational purposes.  
 
-After that, create a conda environment by navigating your command prompt to the folder containing `requirements_conda.yml`,
-that is, the same folder as this file. Then type the command `conda env create -n <package_name> --file requirements_conda.yml` where
-<package_name> should again be replaced by the name of your package.
+The CFPD method is described in the following publication:
+van Thienen, P. (2013). A method for quantitative discrimination in flow pattern evolution of water distribution supply areas with interpretation in terms of demand and leakage. Journal of Hydroinformatics, 15(1), 86-102.
+https://iwaponline.com/jh/article/15/1/86/3218/A-method-for-quantitative-discrimination-in-flow
 
-the folders have the following purpose:
-- tests: contains unit tests. Using pytest is adviced
-- documentation: contains documentation which can be created (and updated) by running make.bat; the result is in `documentation/build/html`
-- <package_name>: contains the code that consists the models and scripts that other people should be able to use
-- research: contains files that run the code in <package_name> to perform research with the models or investigate how
-  the model behaves. By doing this, script to run the model are seperated from the actual code that consists the model.
-  This keeps the model code much more tidy.
 
-Be sure to pick a LICENCE
+## Installation
 
-after this, you should remove all the text in this file and replace it with a small description on your repositories
-content.
+Download the source code and install the required dependencies. 
+
+## Dependencies
+
+The CFPD Tool uses the following non-standard libraries:
+- calendar
+- numpy
+- pygame
+- wx
+- xlrd
+- openpyxl
+
+## Usage
+
+Running cfpdtool.py launches the application GUI. 
+
+Basic and advanced functionalities are described in the report "KWR 2014.087 Roaming CFPD tool for Windows Reference Manual.pdf"
+
+## License
+
+`CFPD Tool` is available under a [EUPL-1.2 license](https://github.com/KWR-Water/CFPD-Tool/blob/master/LICENSE).
+
+## Development and contributions
+
+The code was written in 2010-2014 and was slighly sanitized and updated to run on Python3 in 2023. It is not actively developed or maintained by the original developer because of a shifted work focus and lack of time. However, further cleaning up of the code, development and application are encouraged! 
+
+## Citing
+
+If you publish work based on `CFPD Tool` , I would appreciate a citation of the following reference:
+
+van Thienen, P. (2013). A method for quantitative discrimination in flow pattern evolution of water distribution supply areas with interpretation in terms of demand and leakage. Journal of Hydroinformatics, 15(1), 86-102.
+https://iwaponline.com/jh/article/15/1/86/3218/A-method-for-quantitative-discrimination-in-flow
