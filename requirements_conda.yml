@@ -1,0 +1,14 @@
+channels:
+  - plotly
+  - conda-forge
+  - defaults
+  # - https://repo.anaconda.com/pkgs/free
+dependencies:
+  - pip
+  - python=3.9
+  - pip:
+    - "-r requirements-dev.txt"
+
+
+
+

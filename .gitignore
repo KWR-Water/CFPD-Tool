@@ -1,0 +1,11 @@
+.vscode
+.pytest_cache
+__pycache__
+*.cpython-36.pyc
+.cache
+*.png
+*.code-workspace
+docs/build/*
+figures
+*/.ipynb_checkpoints
+.ipynb_checkpoints

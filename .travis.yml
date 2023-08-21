@@ -1,0 +1,26 @@
+language: python
+
+matrix:
+  include:
+      - python: 3.9
+        dist: trusty
+        sudo: false
+      - python: 3.10
+        dist: xenial
+        sudo: true
+
+before_install:
+    - python --version
+    - pip install --upgrade pip
+    - pip install -U pytest
+    - pip install pytest-cov
+    - pip install codecov
+
+install:
+    - pip install ".[test]"
+
+script:
+   - pytest --cov=package_name tests/
+
+after_success:
+   - codecov
